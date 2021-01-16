@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab>
+        <tab
+            icon=""
+            id="@+id/tab_atHome"
+            title="居家" />
+        <tab
+            icon=""
+            id="@+id/tab_cook"
+            title="2" />
+        <tab
+            icon=""
+            id="@+id/tab_parts"
+            title="3" />
+        <tab
+            icon=""
+            id="@+id/tab_clothing"
+            title="4" />
+        <tab
+            icon=""
+            id="@+id/tab_Interest"
+            title="5" />
+    </tab>
+</PreferenceScreen>
