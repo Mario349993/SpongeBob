@@ -25,7 +25,9 @@
         <activity android:name=".ui.home.HomeActivity">
 
         </activity>
-        <activity android:name=".ui.home.VHomeActivity"></activity>
+        <activity android:name=".ui.home.home.channel.ChannelActivity"/>
+        <activity android:name="com.ui.shop.home.brand.BrandNameActivity"/>
+        <activity android:name=".ui.home.home.brand.BrandActivity"/>
         <activity android:name=".MainActivity" />
     </application>
 

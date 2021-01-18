@@ -60,10 +60,21 @@ class HomeFragment : Fragment(), View.OnClickListener{
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         initListener()
+        initMarquee()
     }
 
+    //TODO 实现跑马灯效果
+    private fun initMarquee() {
+        val marqueeViewListOf = mutableListOf<String>()
+        marqueeViewListOf.add("冬天里的一把火")
+        marqueeViewListOf.add("好嗨呦")
+        marqueeViewListOf.add("立减1000元，人生巅峰！！！")
+        val marqueeAdapter = ShopAdapter(context, marqueeViewListOf)
+        marquee_item.setAdapter(marqueeAdapter)
+    }
     private fun initListener() {
         tv_home_brand_name.setOnClickListener(this)
+        tv_home_newGoods_name.setOnClickListener(this)
     }
 
     //是一种解耦，通过观察者监听 在Homeviewmodel获得数据

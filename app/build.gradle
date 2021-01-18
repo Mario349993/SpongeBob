@@ -110,4 +110,7 @@ dependencies {
 
     //竖着的Tablayout
     implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+
+    //跑马灯
+    implementation 'com.xj.marqueeView:marqueeView:0.1.20'
 }
