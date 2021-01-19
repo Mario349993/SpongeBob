@@ -1,20 +1,74 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="vmSpecial"
+            type="com.shop.ui.home.bean.special.SpecialBean" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.home.special.SpecialFragment">
+        tools:context=".ui.home.special.SpecialFragment"
+        android:descendantFocusability="blocksDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/mNsv_special"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mRlv_special"/>
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/btn_previous_page"
+                        style="@style/special_btn"
+                        android:background="#ffffff"
+                        android:checked="true"
+                        android:text="上一页"/>
+                    <RadioButton
+                        android:id="@+id/btn_next_page"
+                        style="@style/special_btn"
+                        android:background="#ffffff"
+                        android:checked="true"
+                        android:text="下一页"/>
+                </RadioGroup>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
-
+            android:id="@+id/iv_special_all"
+            android:scaleType="fitXY"
+            android:src="#ffffff"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_50"
+            android:id="@+id/tv_special_oading"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="加载中..."
+            android:textSize="@dimen/sp_20"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

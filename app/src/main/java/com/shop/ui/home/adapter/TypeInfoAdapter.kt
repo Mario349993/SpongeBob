@@ -8,22 +8,23 @@ import com.shop.R
 import com.shop.base.BaseAdapter
 import com.shop.base.IItemClick
 import com.shop.ui.home.bean.type.TypeInfoBean
+import com.shop.ui.home.bean.type.TypeSubCategory
 
 class TypeInfoAdapter(context: Context,
-                      list:List<TypeInfoBean.SubCategory>,
+                      list:List<TypeSubCategory>,
                       layouts: SparseArray<Int>,
-                      var click: IItemClick<TypeInfoBean.SubCategory>
+                      var click: IItemClick<TypeSubCategory>
 )
-    : BaseAdapter<TypeInfoBean.SubCategory>(context,list,layouts,click) {
+    : BaseAdapter<TypeSubCategory>(context,list,layouts,click) {
     override fun layoutId(position: Int): Int {
         return R.layout.layout_type_item
     }
 
-    override fun bindData(binding: ViewDataBinding, data: TypeInfoBean.SubCategory, layId: Int) {
+    override fun bindData(binding: ViewDataBinding, data: TypeSubCategory, layId: Int) {
         binding.setVariable(BR.vmtypeinfoListClick,click)
     }
     //刷新token
-    fun refreshData(lt:List<TypeInfoBean.SubCategory>){
+    fun refreshData(lt:List<TypeSubCategory>){
         list = lt
         notifyDataSetChanged()
     }

@@ -9,9 +9,9 @@ import com.shop.ui.home.type.TypeInfoFragment
 class TypeAdapter(fm:FragmentManager):FragmentPagerAdapter(fm) {
 
     private var arrayList = ArrayList<TypeInfoFragment>()
-    private var category = ArrayList<String>()
+    private var category = ArrayList<Category>()
 
-    fun addList(arrayList: ArrayList<TypeInfoFragment>, category: ArrayList<String>){
+    fun addList(arrayList: ArrayList<TypeInfoFragment>, category: ArrayList<Category>){
         this.arrayList = arrayList
         this.category = category
         notifyDataSetChanged()
@@ -25,6 +25,6 @@ class TypeAdapter(fm:FragmentManager):FragmentPagerAdapter(fm) {
     }
 
     override fun getPageTitle(position: Int): CharSequence? {
-        return category[position]
+        return category[position].name
     }
 }

@@ -7,4 +7,8 @@
     <string name="bar_name_shop">购物车</string>
     <string name="bar_name_me">我的</string>
 
+    <string name="special_price_info">元起</string>
+    <string name="newgoods_price_info">￥</string>
+    <string name="type_info_name">分类</string>
+
 </resources>

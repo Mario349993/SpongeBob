@@ -37,8 +37,8 @@ class SystemRepository {
     /**
      * 获取专题数据
      */
-    suspend fun getTopic() = withContext(Dispatchers.IO){
-        serviceApi.getTopic()
+    suspend fun getTopic(page:Int) = withContext(Dispatchers.IO){
+        serviceApi.getTopic(page)
     }
 
     /**
@@ -51,7 +51,7 @@ class SystemRepository {
     /**
      * 分类右
      */
-    suspend fun getTypeData(id:Int) = withContext(Dispatchers.IO){
+    suspend fun getTypeInfo(id:Int) = withContext(Dispatchers.IO){
         serviceApi.getTypeInfo(id)
     }
 

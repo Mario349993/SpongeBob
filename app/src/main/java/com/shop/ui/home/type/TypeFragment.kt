@@ -17,7 +17,7 @@ class TypeFragment : BaseFragment<TypeViewModel, FragmentTypeBinding>
 
     //采用伴生对象 companion object==static
     companion object{
-        val instance by lazy { TypeFragment() }
+        val instance : TypeFragment by lazy { TypeFragment() }
     }
 
     override fun initView() {
@@ -29,20 +29,20 @@ class TypeFragment : BaseFragment<TypeViewModel, FragmentTypeBinding>
         val fragments = ArrayList<TypeInfoFragment>()
         if (!isAdded)return
         mViewModel.gettype.observe(this, Observer { categroy ->
-            var title = ArrayList<String>()
+            //var title = ArrayList<String>()
             for (i in categroy.indices){
-                var id = categroy.get(i).id
-                var typeInfoFragment = TypeInfoFragment()
-                var bundle = Bundle()
+                val id = categroy.get(i).id
+                val typeInfoFragment = TypeInfoFragment()
+                val bundle = Bundle()
                 bundle.putInt("id",id)
                 typeInfoFragment.setArguments(bundle)
                 fragments.add(typeInfoFragment)
 
-                title[i] = categroy[i].name
+                //title[i] = categroy[i].name
             }
             var typeAdapter = TypeAdapter(childFragmentManager)
             mVp_type.adapter = typeAdapter
-            typeAdapter.addList(fragments,title)
+            typeAdapter.addList(fragments,categroy as ArrayList<Category>)
             mTab_type.setupWithViewPager(mVp_type)
         })
     }

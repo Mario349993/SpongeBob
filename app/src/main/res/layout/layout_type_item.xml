@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vmtypeinfoList"
-            type="com.shop.ui.home.bean.type.TypeInfoBean.SubCategory" />
+            type="com.shop.ui.home.bean.type.TypeSubCategory" />
 
         <variable
             name="vmtypeinfoListClick"

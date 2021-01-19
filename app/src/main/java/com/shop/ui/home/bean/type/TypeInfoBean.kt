@@ -1,10 +1,6 @@
 package com.shop.ui.home.bean.type
 
 data class TypeInfoBean(
-    val currentCategory: CurrentCategory
-
-) {
-    data class CurrentCategory(
         val banner_url: String,
         val front_desc: String,
         val front_name: String,
@@ -23,7 +19,7 @@ data class TypeInfoBean(
         val wap_banner_url: String
     )
 
-    data class SubCategory(
+    data class TypeSubCategory(
         val banner_url: String,
         val front_desc: String,
         val front_name: String,
@@ -40,5 +36,5 @@ data class TypeInfoBean(
         val type: Int,
         val wap_banner_url: String
     )
-}
+
 
